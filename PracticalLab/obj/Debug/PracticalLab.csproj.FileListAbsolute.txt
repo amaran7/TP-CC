@@ -1,0 +1,17 @@
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\MainWindow.g.cs
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\App.g.cs
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab_MarkupCompile.cache
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab_MarkupCompile.lref
+D:\VisualStudioProjects\PracticalLab\PracticalLab\bin\Debug\PracticalLab.exe.config
+D:\VisualStudioProjects\PracticalLab\PracticalLab\bin\Debug\PracticalLab.exe
+D:\VisualStudioProjects\PracticalLab\PracticalLab\bin\Debug\PracticalLab.pdb
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\MainWindow.baml
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab.g.resources
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab.Properties.Resources.resources
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab.UI.MainForm.resources
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab.csproj.GenerateResource.Cache
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab.exe
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab.pdb
+D:\VisualStudioProjects\PracticalLab\PracticalLab\bin\Debug\NSubstitute.dll
+D:\VisualStudioProjects\PracticalLab\PracticalLab\bin\Debug\NSubstitute.xml
+D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab.csprojResolveAssemblyReference.cache

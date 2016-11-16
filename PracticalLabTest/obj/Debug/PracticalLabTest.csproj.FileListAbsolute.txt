@@ -1,0 +1,14 @@
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\bin\Debug\PracticalLabTest.dll
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\bin\Debug\PracticalLabTest.pdb
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\obj\Debug\PracticalLabTest.dll
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\obj\Debug\PracticalLabTest.pdb
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\bin\Debug\NSubstitute.dll
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\bin\Debug\NSubstitute.xml
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\obj\Debug\PracticalLabTest.csprojResolveAssemblyReference.cache
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\bin\Debug\PracticalLab.exe
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\bin\Debug\PracticalLab.pdb
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\obj\Debug\PracticalLabTest.Resource.resources
+D:\VisualStudioProjects\PracticalLab\PracticalLabTest\obj\Debug\PracticalLabTest.csproj.GenerateResource.Cache
