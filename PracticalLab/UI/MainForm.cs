@@ -40,7 +40,7 @@ namespace PracticalLab.UI
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            program.startDetection(previewBitmap);
+            program.applyDetection(null);
         }
 
         public void display(Bitmap bitmapToDisplay)

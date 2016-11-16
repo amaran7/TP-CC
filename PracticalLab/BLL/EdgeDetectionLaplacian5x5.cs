@@ -28,7 +28,14 @@ namespace PracticalLab
 
         public override void startDetection(Bitmap img)
         {
-            applyEdgeDetectionWithConvolution(img, matrix, firstValue, secondValue, grayscale);
+            try
+            {
+                applyEdgeDetectionWithConvolution(img, matrix, firstValue, secondValue, grayscale);
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+            
             
         }
 

@@ -12,3 +12,16 @@ D:\VisualStudioProjects\PracticalLab\PracticalLabTest\bin\Debug\PracticalLab.exe
 D:\VisualStudioProjects\PracticalLab\PracticalLabTest\bin\Debug\PracticalLab.pdb
 D:\VisualStudioProjects\PracticalLab\PracticalLabTest\obj\Debug\PracticalLabTest.Resource.resources
 D:\VisualStudioProjects\PracticalLab\PracticalLabTest\obj\Debug\PracticalLabTest.csproj.GenerateResource.Cache
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\obj\Debug\PracticalLabTest.csprojResolveAssemblyReference.cache
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\obj\Debug\PracticalLabTest.Resource.resources
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\obj\Debug\PracticalLabTest.csproj.GenerateResource.Cache
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\obj\Debug\PracticalLabTest.dll
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\obj\Debug\PracticalLabTest.pdb
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\bin\Debug\PracticalLabTest.dll
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\bin\Debug\PracticalLabTest.pdb
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\bin\Debug\NSubstitute.dll
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\bin\Debug\PracticalLab.exe
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\bin\Debug\PracticalLab.pdb
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\bin\Debug\NSubstitute.xml
+C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLabTest\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll

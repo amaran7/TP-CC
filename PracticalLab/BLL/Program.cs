@@ -12,7 +12,7 @@ using PracticalLab.DLL;
 
 namespace PracticalLab
 {
-    public class Program : IProgramBehaviour, IEdgeDetection
+    public class Program : IProgramBehaviour
     {
         private IEdgeDetection edgeDetection;
         private DLLManager dllManager;
@@ -31,6 +31,7 @@ namespace PracticalLab
             if (fileName != "")
             { 
                 originalImage = dllManager.loadFromDisk(fileName);
+                resultImage = originalImage;
                 applyResult(originalImage);
             }
         }
@@ -52,22 +53,35 @@ namespace PracticalLab
             }
         }
 
-        public void startDetection(Bitmap img)
-        {
-            edgeDetection.startDetection(originalImage);
-            resultImage = edgeDetection.getImage();
-            applyResult(resultImage);
-        }
-
         public Bitmap getImage()
         {
             return resultImage ;
+        }
+
+        public void setImage(Bitmap img)
+        {
+            this.originalImage = img;
         }
 
         public void applyResult(Bitmap image)
         {
             if (image != null)
                 mainForm.display(image);
+        }
+
+        public void applyDetection(Bitmap img)
+        {
+            if (img != null)
+            {
+                edgeDetection.startDetection(img);
+            }
+            else
+            {
+                edgeDetection.startDetection(originalImage);
+            }
+
+            resultImage = edgeDetection.getImage();
+            applyResult(resultImage);
         }
     }
 }

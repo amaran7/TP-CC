@@ -14,6 +14,9 @@ namespace PracticalLab.BLL
 
         void save(Bitmap image, String filename, ImageFormat format);
 
+        void applyDetection(Bitmap img);
+
         void applyResult(Bitmap image);
+
     }
 }
