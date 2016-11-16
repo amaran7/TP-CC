@@ -7,6 +7,7 @@ using PracticalLab.UI;
 using System.IO;
 using System;
 using System.Reflection;
+using System.Drawing.Imaging;
 
 namespace PracticalLabTest
 {
@@ -18,10 +19,13 @@ namespace PracticalLabTest
 
         // Image de départ
         Bitmap imageInitiale = Resource.BunnyLandscape;
+        Bitmap imageBmp = Resource.landscapeNature;
+        Bitmap imageJPG = Resource.HortonLandscape;
         Bitmap imageAvecLaplacian5x5 = Resource.BunnyLandscapeWithLaplacian5x5;
 
         ILoadBehaviour ilb = Substitute.For<ILoadBehaviour>();
         IEdgeDetection ied = Substitute.For<IEdgeDetection>();
+        ISaveBehaviour isb = Substitute.For<ISaveBehaviour>();
 
         
         /**-------------------------
@@ -145,6 +149,77 @@ namespace PracticalLabTest
         * SHOW RESULT FUNCTIONNALITY TESTS
         *
         --------------------------**/
+
+        [TestMethod]
+        public void TestShowResult()
+        {
+            ied.When(x => x.startDetection(null)).Do(x => { });
+            ied.getImage().Returns<Bitmap>(imageAvecLaplacian5x5);
+
+            program.applyDetection(null);
+
+        }
+
+        [TestMethod]
+        public void TestShowResultRetException()
+        {
+            ied.When(x => x.startDetection(null)).Do(x => { });
+            ied.When(x => x.getImage()).Do(x => { throw new Exception(); });
+
+            program.applyDetection(null);
+
+        }
+
+        /**-------------------------
+        *
+        * SAVE FUNCTIONNALITY TESTS
+        *
+        --------------------------**/
+        [TestMethod]
+        public void TestSaveBMP()
+        {
+            String tempfilename = "C:\\Users\\Michel\\Documents\\GitHub\\tp-cc\\TP-CC\\PracticalLabTest\\Resources\\test.bmp";
+            ImageFormat ifa = new ImageFormat(new Guid());
+            ifa = ImageFormat.Png;
+
+
+            program.save(imageBmp, tempfilename, ifa);
+
+
+        }
+        [TestMethod]
+        public void TestSaveJPG()
+        {
+
+            isb.When(x => x.save(null, "", null)).Do(x => { throw new Exception(); });
+
+            program.setImage(imageInitiale);
+            program.save(imageAvecLaplacian5x5, "fakeFilename", null);
+
+        }
+        [TestMethod]
+        public void TestSavePNG()
+        {
+
+            isb.When(x => x.save(null, "", null)).Do(x => { throw new Exception(); });
+
+            program.setImage(imageInitiale);
+            program.save(imageAvecLaplacian5x5, "fakeFilename", null);
+
+        }
+
+
+        [TestMethod]
+        public void TestSaveImgRetException()
+        {
+            
+            isb.When(x => x.save(null, "", null)).Do(x => { throw new Exception(); });
+
+            program.setImage(imageInitiale);
+            program.save(imageAvecLaplacian5x5, "fakeFilename", null);
+
+        }
+
 
 
 

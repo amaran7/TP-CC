@@ -40,15 +40,7 @@ namespace PracticalLab
         {
             if (resultImage != null) {
                 
-                string fileExtension = Path.GetExtension(filename).ToUpper();
-                if (fileExtension == ".BMP")
-                {
-                    imgf = ImageFormat.Bmp;
-                }
-                else if (fileExtension == ".JPG")
-                {
-                    imgf = ImageFormat.Jpeg;
-                }
+                
                 dllManager.saveToFile(resultImage, filename, imgf);
             }
         }
@@ -61,6 +53,7 @@ namespace PracticalLab
         public void setImage(Bitmap img)
         {
             this.originalImage = img;
+            this.resultImage = this.originalImage;
         }
 
         public void applyResult(Bitmap image)

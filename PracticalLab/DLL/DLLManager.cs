@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,16 @@ namespace PracticalLab.DLL
         public void saveToFile(Bitmap image, String filename, ImageFormat format)
         {
             isb = new SaveToFile();
+
+            string fileExtension = Path.GetExtension(filename).ToUpper();
+            if (fileExtension == ".BMP")
+            {
+                format = ImageFormat.Bmp;
+            }
+            else if (fileExtension == ".JPG")
+            {
+                format = ImageFormat.Jpeg;
+            }
             isb.save(image, filename, format);
         }
 

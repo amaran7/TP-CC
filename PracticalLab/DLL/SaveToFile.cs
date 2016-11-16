@@ -21,7 +21,7 @@ namespace PracticalLab
                 streamWriter.Close();
             }catch(Exception e)
             {
-                Console.WriteLine("in catch");
+                Console.WriteLine(e.StackTrace);
             }
         }
     }
