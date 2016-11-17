@@ -15,9 +15,9 @@ namespace PracticalLab
     public class Program : IProgramBehaviour
     {
         private IEdgeDetection edgeDetection;
-        private DLLManager dllManager;
+        private IDLLManagerBehaviour dllManager;
         private Bitmap originalImage, resultImage;
-        private MainForm mainForm;
+        private IUIManipulation mainForm;
         
         public Program(MainForm mf)
         {

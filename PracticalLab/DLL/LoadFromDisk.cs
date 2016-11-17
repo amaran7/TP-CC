@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace PracticalLab
 {
-    class LoadFromDisk : ILoadBehaviour
+    public class LoadFromDisk : ILoadBehaviour
     {
 
         private Bitmap image;

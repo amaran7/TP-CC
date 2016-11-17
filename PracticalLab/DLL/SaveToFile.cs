@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PracticalLab
 {
-    class SaveToFile : ISaveBehaviour
+    public class SaveToFile : ISaveBehaviour
     {
         public void save(Bitmap image, String filename, ImageFormat format)
         {

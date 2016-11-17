@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PracticalLab.DLL
 {
-    public class DLLManager
+    public class DLLManager : IDLLManagerBehaviour
     {
         public ISaveBehaviour isb;
         public ILoadBehaviour ilb;

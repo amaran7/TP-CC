@@ -18,14 +18,10 @@ namespace PracticalLab.BLL
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MainForm());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
 
-            string appFolderPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-            string str1 = Path.Combine(Directory.GetParent(appFolderPath).Parent.Parent.FullName, "PracticalLabTest\\Resources\\BunnyLandscape.png");
-            string str = @""+str1;
-            Console.WriteLine(str);
         }
     }
 }

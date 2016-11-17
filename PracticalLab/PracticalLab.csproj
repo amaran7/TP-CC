@@ -68,6 +68,7 @@
     <Compile Include="BLL\IProgramBehaviour.cs" />
     <Compile Include="BLL\MainApp.cs" />
     <Compile Include="DLL\DLLManager.cs" />
+    <Compile Include="DLL\IDLLManagerBehaviour.cs" />
     <Compile Include="UI\ExtBitmap.cs" />
     <Compile Include="UI\IUIManipulation.cs" />
     <Compile Include="UI\MainForm.cs">
