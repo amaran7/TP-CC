@@ -27,8 +27,9 @@ namespace PracticalLabTest
         IEdgeDetection ied = Substitute.For<IEdgeDetection>();
         IDLLManagerBehaviour idllmb = Substitute.For<IDLLManagerBehaviour>();
         IUIManipulation iuim = Substitute.For<IUIManipulation>();
-
         
+
+
         /**-------------------------
         *
         * LOAD FUNCTIONNALITY TESTS
@@ -40,8 +41,11 @@ namespace PracticalLabTest
         {
 
             Bitmap nullImg = null;
-            idllmb.loadFromDisk("fakeFilename").Returns<Bitmap>(nullImg);
+            idllmb.setProgram(program);
+            program.initDLLManager(idllmb);
+            idllmb.loadFromDisk(Arg.Any<String>()).Returns<Bitmap>(nullImg);
             program.load("fakeFilename");
+            Assert.AreEqual(nullImg, null);
 
         }
 
@@ -50,9 +54,33 @@ namespace PracticalLabTest
         public void testLoadEmptyFilename()
         {
             string str = "";
-            program.load(str);
+            try
+            {
+                program.load(str);
+                Assert.IsTrue(true);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Program failure with empty filename image to load");
+            }
         }
 
+        [TestMethod]
+        public void testLoadFakeFilename()
+        {
+            string str = "fakefilename";
+            try
+            {
+                program.load(str);
+                Assert.IsTrue(true);
+            }catch(Exception e)
+            {
+                Assert.Fail("Program failure with fake filename image to load");
+            }
+            
+
+
+        }
 
         [TestMethod]
         public void testLoadValidImage()
@@ -76,8 +104,19 @@ namespace PracticalLabTest
         [TestMethod]
         public void testLoadRetException()
         {
-            idllmb.When(x => x.loadFromDisk("fakename")).Do(x => { throw new Exception(); });
-            program.load("fakename");
+            idllmb.setProgram(program);
+            program.initDLLManager(idllmb);
+            idllmb.When(x => x.loadFromDisk(Arg.Any<String>())).Do(x => { throw new Exception(); });
+            
+            try
+            {
+                program.load("fakename");
+                Assert.IsTrue(true);
+            }
+            catch(Exception e)
+            {
+                Assert.Fail("Program fail after load image");
+            }
 
         }
 
@@ -91,9 +130,22 @@ namespace PracticalLabTest
         [TestMethod]
         public void TestLaplacian5x5ImageNull()
         {
-        
+            program.setImage(imageInitiale);
             program.applyDetection(null);
             Bitmap imageAvecEdgeDetection = program.getImage();
+
+            for (int i = 0; i < imageAvecEdgeDetection.Width; i++)
+            {
+                for (int j = 0; j < imageAvecEdgeDetection.Height; j++)
+                {
+                    Color couleurPixelSouhaite = imageAvecLaplacian5x5.GetPixel(i, j);
+                    Color couleurPixelTest = imageAvecEdgeDetection.GetPixel(i, j);
+
+                    Assert.AreEqual(couleurPixelSouhaite, couleurPixelTest);
+                }
+            }
+
+
         }
 
         [TestMethod]
@@ -140,8 +192,20 @@ namespace PracticalLabTest
         [TestMethod]
         public void TestLaplacian5x5RetException()
         {
-            ied.When(x => x.startDetection(null)).Do(x => { throw new Exception(); });
-            program.applyDetection(null);
+            ied.When(x => x.startDetection(Arg.Any<Bitmap>())).Do(x => { throw new Exception(); });
+            program.initEdgeDetection(ied);
+            program.setImage(imageInitiale);
+            
+            try
+            {
+                program.applyDetection(null);
+            }
+            catch (Exception)
+            {
+                Assert.Fail("Test Failed by Buisiness layer");
+            }
+
+
         }
 
 
@@ -154,7 +218,7 @@ namespace PracticalLabTest
         [TestMethod]
         public void TestShowResult()
         {
-            ied.When(x => x.startDetection(null)).Do(x => { });
+            ied.When(x => x.startDetection(Arg.Any<Bitmap>())).Do(x => { });
             ied.getImage().Returns<Bitmap>(imageAvecLaplacian5x5);
 
             program.applyDetection(null);
@@ -164,10 +228,17 @@ namespace PracticalLabTest
         [TestMethod]
         public void TestShowResultRetException()
         {
-            ied.When(x => x.startDetection(null)).Do(x => { });
-            ied.When(x => x.getImage()).Do(x => { throw new Exception(); });
-
-            program.applyDetection(null);
+            program.setMainForm(iuim);
+            iuim.When(x => x.display(Arg.Any<Bitmap>())).Do(x => { throw new Exception(); });
+            try
+            {
+                program.applyResult(imageInitiale);
+                Assert.IsTrue(true);
+            }catch(Exception e)
+            {
+                Assert.Fail("Buisness does not process error after display try");
+            }
+            
 
         }
 
@@ -193,11 +264,17 @@ namespace PracticalLabTest
         [TestMethod]
         public void TestSaveImgRetException()
         {
-            
+            program.initDLLManager(idllmb);
             idllmb.When(x => x.saveToFile(Arg.Any<Bitmap>(), Arg.Any<String>(), Arg.Any<ImageFormat>())).Do(x => { throw new Exception(); });
-            program.setImage(imageInitiale);
-            program.save(imageAvecLaplacian5x5, "fakeFilename", null);
 
+            program.setImage(imageInitiale);
+            try {
+                program.save(imageAvecLaplacian5x5, "fakeFilename", null);
+                Assert.IsTrue(true);
+            }catch(Exception e)
+            {
+                Assert.Fail("Buisness does not process error from DLL saving exception");
+            }
         }
 
 

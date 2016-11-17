@@ -22,26 +22,66 @@ namespace PracticalLab
         public Program(MainForm mf)
         {
             mainForm = mf;
-            edgeDetection = new EdgeDetectionLaplacian5x5(this);
-            dllManager = new DLLManager(this);
+            this.initEdgeDetection(null);
+            this.initDLLManager(null);
+        }
+
+        public void setMainForm(IUIManipulation iuim)
+        {
+            mainForm = iuim;
+        }
+        public void initDLLManager(IDLLManagerBehaviour idllm)
+        {
+            if(idllm == null)
+            {
+                dllManager = new DLLManager(this);
+            }
+            else
+            {
+                dllManager = idllm;
+            }
+        }
+        public void initEdgeDetection(IEdgeDetection ied)
+        {
+            if (ied == null)
+            {
+                edgeDetection = new EdgeDetectionLaplacian5x5(this);
+            }
+            else
+            {
+                edgeDetection = ied;
+            }
         }
 
         public void load(string fileName)
         {
             if (fileName != "")
-            { 
-                originalImage = dllManager.loadFromDisk(fileName);
-                resultImage = originalImage;
-                applyResult(originalImage);
+            {
+                try
+                {
+                    originalImage = dllManager.loadFromDisk(fileName);
+                    resultImage = originalImage;
+                    applyResult(originalImage);
+                }catch(Exception e)
+                {
+                    Console.WriteLine("load error");
+                }
+                
             }
         }
 
         public void save(Bitmap image, String filename, ImageFormat imgf)
         {
             if (resultImage != null) {
+                try
+                {
+                    dllManager.saveToFile(resultImage, filename, imgf);
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("save error");
+                }
                 
-                
-                dllManager.saveToFile(resultImage, filename, imgf);
             }
         }
 
@@ -59,22 +99,40 @@ namespace PracticalLab
         public void applyResult(Bitmap image)
         {
             if (image != null)
-                mainForm.display(image);
+            {
+                try { 
+                    mainForm.display(image);
+                }catch (Exception e)
+                {
+                    Console.WriteLine("display error");
+                }
+             }
+                
         }
 
         public void applyDetection(Bitmap img)
         {
-            if (img != null)
+            try
             {
-                edgeDetection.startDetection(img);
-            }
-            else
+                if (img != null)
+                {
+                    edgeDetection.startDetection(img);
+                }
+                else
+                {
+                    edgeDetection.startDetection(originalImage);
+                }
+
+                resultImage = edgeDetection.getImage();
+                
+            }catch(Exception e)
             {
-                edgeDetection.startDetection(originalImage);
+                Console.WriteLine("EdgeDetection Error");
+                resultImage = originalImage;
             }
 
-            resultImage = edgeDetection.getImage();
             applyResult(resultImage);
+
         }
     }
 }

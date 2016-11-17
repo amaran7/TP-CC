@@ -10,6 +10,7 @@ namespace PracticalLab.DLL
 {
     public interface IDLLManagerBehaviour
     {
+        void setProgram(Program p);
         void saveToFile(Bitmap image, String filename, ImageFormat format);
         Bitmap loadFromDisk(string fileName);
     }

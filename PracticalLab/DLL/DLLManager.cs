@@ -17,7 +17,12 @@ namespace PracticalLab.DLL
 
         public DLLManager(Program program)
         {
-            this.program = program;
+            setProgram(program);
+        }
+
+        public void setProgram(Program p)
+        {
+            this.program = p;
         }
 
         public void saveToFile(Bitmap image, String filename, ImageFormat format)
