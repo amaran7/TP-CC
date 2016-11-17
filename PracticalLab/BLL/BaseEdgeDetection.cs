@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace PracticalLab.BLL
 {
+    /*Classe de base qui sera utilisée par toutes les applications de Edge detection.
+      Selon le type de filtre, l'application se fait avec la méthode applyEdgeDetectionWithConvolution,
+      le nombre de paramètres est différent selon le Edge detection choisi
+    */ 
     public abstract class BaseEdgeDetection : IEdgeDetection
     {
         protected Bitmap tempImage;

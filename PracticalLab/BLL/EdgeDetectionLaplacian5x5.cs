@@ -39,7 +39,7 @@ namespace PracticalLab
             
         }
 
-
+        // méthode permettant de configurer la Matrix propre au filtre
         public void setMatrix()
         {
             matrix = new double[,] {

@@ -32,3 +32,6 @@ C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLab\obj\Debug\PracticalLab
 C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLab\obj\Debug\PracticalLab.Properties.Resources.resources
 C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLab\obj\Debug\PracticalLab.UI.MainForm.resources
 C:\Users\Michel\Documents\GitHub\tp-cc\TP-CC\PracticalLab\obj\Debug\PracticalLab.csproj.GenerateResource.Cache
+D:\VisualStudioProjects\TP-CC\TP-CC\PracticalLab\bin\Debug\PracticalLab.exe.config
+D:\VisualStudioProjects\TP-CC\TP-CC\PracticalLab\obj\Debug\PracticalLab.exe
+D:\VisualStudioProjects\TP-CC\TP-CC\PracticalLab\obj\Debug\PracticalLab.pdb

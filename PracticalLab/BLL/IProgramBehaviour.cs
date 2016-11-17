@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace PracticalLab.BLL
 {
+    // Interface qui oblige le programme à accomplir les fonctionnalités minimales
     public interface IProgramBehaviour
     {
         void load(String fileName);

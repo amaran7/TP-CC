@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace PracticalLab.DLL
 {
+    // Interface définissant ce que l'on veut que fasse le DLLManager
     public interface IDLLManagerBehaviour
     {
         void setProgram(Program p);
