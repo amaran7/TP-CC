@@ -61,7 +61,7 @@ namespace PracticalLab
                 {
                     originalImage = dllManager.loadFromDisk(fileName);
                     resultImage = originalImage;
-                    applyResult(originalImage);
+                    applyResult(originalImage, "apply");
                 }catch(Exception e)
                 {
                     Console.WriteLine("load error");
@@ -96,12 +96,12 @@ namespace PracticalLab
             this.resultImage = this.originalImage;
         }
 
-        public void applyResult(Bitmap image)
+        public void applyResult(Bitmap image, String str)
         {
             if (image != null)
             {
                 try { 
-                    mainForm.display(image);
+                    mainForm.display(image, str);
                 }catch (Exception e)
                 {
                     Console.WriteLine("display error");
@@ -131,7 +131,7 @@ namespace PracticalLab
                 resultImage = originalImage;
             }
 
-            applyResult(resultImage);
+            applyResult(resultImage, "save");
 
         }
     }

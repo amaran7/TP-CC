@@ -16,7 +16,7 @@ namespace PracticalLab.BLL
 
         void applyDetection(Bitmap img);
 
-        void applyResult(Bitmap image);
+        void applyResult(Bitmap image, String enabledElement);
 
     }
 }

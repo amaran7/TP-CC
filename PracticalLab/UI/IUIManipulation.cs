@@ -9,6 +9,6 @@ namespace PracticalLab.UI
 {
     public interface IUIManipulation
     {
-        void display(Bitmap bitmapToDisplay);
+        void display(Bitmap bitmapToDisplay, String btn);
     }
 }

@@ -15,6 +15,7 @@ namespace PracticalLabTest
     [TestClass]
     public class UnitTests
     {
+        // Programme de base (BLL)
         static MainForm mainForm = new MainForm();
         Program program = new Program(mainForm);
 
@@ -24,6 +25,7 @@ namespace PracticalLabTest
         Bitmap imageJPG = Resource.HortonLandscape;
         Bitmap imageAvecLaplacian5x5 = Resource.BunnyLandscapeWithLaplacian5x5;
         
+        // Substitution des interfaces
         IEdgeDetection ied = Substitute.For<IEdgeDetection>();
         IDLLManagerBehaviour idllmb = Substitute.For<IDLLManagerBehaviour>();
         IUIManipulation iuim = Substitute.For<IUIManipulation>();
@@ -92,6 +94,7 @@ namespace PracticalLabTest
 
             Bitmap temp = program.getImage();
 
+            // test permettant de savoir si les 2 images sont identiques
             for(int x = 0; x < temp.Height; x++)
             {
                 for (int y = 0; y < temp.Width; y++) {
@@ -134,6 +137,7 @@ namespace PracticalLabTest
             program.applyDetection(null);
             Bitmap imageAvecEdgeDetection = program.getImage();
 
+            // test si les 2 images sont identiques pixel par pixel
             for (int i = 0; i < imageAvecEdgeDetection.Width; i++)
             {
                 for (int j = 0; j < imageAvecEdgeDetection.Height; j++)
@@ -154,6 +158,7 @@ namespace PracticalLabTest
             program.applyDetection(imageInitiale);
             Bitmap imageAvecEdgeDetection = program.getImage();
 
+            // test si les 2 images sont identiques pixel par pixel
             for (int i = 0; i < imageAvecEdgeDetection.Width; i++)
             {
                 for (int j = 0; j < imageAvecEdgeDetection.Height; j++)
@@ -175,6 +180,7 @@ namespace PracticalLabTest
             program.applyDetection(null);
             Bitmap imageAvecEdgeDetection = program.getImage();
 
+            // test si les 2 images sont identiques pixel par pixel
             for (int i = 0; i < imageAvecEdgeDetection.Width; i++)
             {
                 for (int j = 0; j < imageAvecEdgeDetection.Height; j++)
@@ -229,10 +235,10 @@ namespace PracticalLabTest
         public void TestShowResultRetException()
         {
             program.setMainForm(iuim);
-            iuim.When(x => x.display(Arg.Any<Bitmap>())).Do(x => { throw new Exception(); });
+            iuim.When(x => x.display(Arg.Any<Bitmap>(), Arg.Any<String>())).Do(x => { throw new Exception(); });
             try
             {
-                program.applyResult(imageInitiale);
+                program.applyResult(imageInitiale, "fakestate");
                 Assert.IsTrue(true);
             }catch(Exception e)
             {
