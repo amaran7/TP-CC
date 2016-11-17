@@ -57,8 +57,8 @@ namespace PracticalLabTest
         [TestMethod]
         public void testLoadValidImage()
         {
-
-            string str = "C:\\Users\\Michel\\Documents\\GitHub\\tp-cc\\TP-CC\\PracticalLabTest\\Resources\\BunnyLandscape.png";
+            // chemin permettant d'accéder à l'image se trouvant dans le dossier de ressources
+            string str = "..\\..\\Resources\\BunnyLandscape.png";
 
             program.load(str);
 
@@ -179,7 +179,8 @@ namespace PracticalLabTest
         [TestMethod]
         public void TestSaveBMP()
         {
-            String tempfilename = "C:\\Users\\Michel\\Documents\\GitHub\\tp-cc\\TP-CC\\PracticalLabTest\\Resources\\test.bmp";
+            // chemin d'accès permettant de sauvegarder une image nommée test.bmp dans le dossier de ressources
+            String tempfilename = "..\\..\\Resources\\test.bmp";
             ImageFormat ifa = new ImageFormat(new Guid());
             ifa = ImageFormat.Png;
 
