@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PracticalLab.App" Collapsed="true">
+    <Position X="24.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PracticalLab.EdgeDetectionLaplacian5x5">
+    <Position X="14.5" Y="2.5" Width="2.25" />
+    <InheritanceLine Type="PracticalLab.BLL.BaseEdgeDetection" FixedToPoint="true">
+      <Path>
+        <Point X="12.875" Y="2.5" />
+        <Point X="12.875" Y="2.26" />
+        <Point X="15.625" Y="2.26" />
+        <Point X="15.625" Y="2.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAJAAQAAAAAAAAQAAAAAAAAAAABE=</HashCode>
+      <FileName>BLL\EdgeDetectionLaplacian5x5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PracticalLab.Program" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAIICAAAAAAxAAIQAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>BLL\Program.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PracticalLab.LoadFromDisk" BaseTypeListCollapsed="true">
+    <Position X="1" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DLL\LoadFromDisk.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PracticalLab.SaveToFile" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DLL\SaveToFile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PracticalLab.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PracticalLab.BLL.BaseEdgeDetection">
+    <Position X="11.5" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAABAAACAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>BLL\BaseEdgeDetection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PracticalLab.BLL.MainApp">
+    <Position X="14.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>BLL\MainApp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PracticalLab.DLL.DLLManager" BaseTypeListCollapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAQAAACIAAAAE=</HashCode>
+      <FileName>DLL\DLLManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PracticalLab.Properties.Resources" Collapsed="true">
+    <Position X="24.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PracticalLab.Properties.Settings" Collapsed="true">
+    <Position X="24.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PracticalLab.UI.ExtBitmap">
+    <Position X="19.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\ExtBitmap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PracticalLab.UI.MainForm" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAAACAAAAAAAACACAACAAEAABAAAAAAAAIAgEE=</HashCode>
+      <FileName>UI\MainForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="PracticalLab.IEdgeDetection">
+    <Position X="12.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>BLL\IEdgeDetection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PracticalLab.ILoadBehaviour">
+    <Position X="1" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DLL\ILoadBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PracticalLab.ISaveBehaviour">
+    <Position X="4.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DLL\ISaveBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PracticalLab.BLL.IProgramBehaviour">
+    <Position X="9.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAIICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IProgramBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PracticalLab.DLL.IDLLManagerBehaviour">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>DLL\IDLLManagerBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PracticalLab.UI.IUIManipulation">
+    <Position X="17.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\IUIManipulation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
